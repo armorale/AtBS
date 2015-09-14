@@ -1,0 +1,22 @@
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+
+def printGrid(gridPicture):
+	listNumber = 0
+	indexNumber = 0
+	rowPrint = ''
+	while indexNumber<6: 
+		while listNumber < len(gridPicture): #length of the grid 9, want to print 
+			rowPrint+=gridPicture[listNumber][indexNumber]
+			listNumber+=1
+		print(rowPrint)
+		indexNumber= indexNumber+1
+
+printGrid(grid)
