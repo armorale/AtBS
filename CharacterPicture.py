@@ -1,3 +1,6 @@
+#By: Andrew Morales
+#edited by David Kamkar
+#Code takes a list? and prints the variables it one at a time.
 #https://automatetheboringstuff.com/chapter4/
 #the project is at the end of the page
 
@@ -15,7 +18,7 @@ def printGrid(gridPicture):
 	listNumber = 0
 	indexNumber = 0
 	rowPrint = ''
-	while indexNumber<6: 
+	while indexNumber < len(grid[0]): 
 		while listNumber < len(gridPicture): #length of the grid 9, want to print 
 			rowPrint+=gridPicture[listNumber][indexNumber]
 			listNumber+=1
@@ -23,3 +26,5 @@ def printGrid(gridPicture):
 		indexNumber= indexNumber+1
 
 printGrid(grid)
+#print len(grid)
+#print len(grid[0])
