@@ -1,0 +1,22 @@
+dataTable = [['apples', 'oranges','cherries','banana'],
+			['Alice','Bob','Carol','David'],
+			['dogs','cats','moose','goose']]
+colWidth=[]
+
+for z in range(len(dataTable)):
+	x = dataTable[z][0]
+	for i in range(1,len(dataTable[z])):
+		if len(x) < len(dataTable[z][i]):
+			x = dataTable[z][i]
+		else:
+			x = x # this keeps resetting to the lowest value, because 8 is not lower than 7, so it resets the value of x
+	colWidth+=[len(x)]
+
+def printTable():
+	p = 0
+	for z in range(len(dataTable[0])):
+		print(dataTable[p][z].rjust(int(colWidth[p]))+' '+
+			dataTable[p+1][z].rjust(int(colWidth[p+1]))+' '+
+				dataTable[p+2][z].rjust(int(colWidth[p+2])))
+
+printTable()
