@@ -1,4 +1,6 @@
 
+#this is to work similar to a trim function. Trim white space, but if user inputs other characters it should trim those as well.
+
 import re
 
 #ask what string of text they want searched and eliminated
