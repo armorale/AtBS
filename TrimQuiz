@@ -1,0 +1,31 @@
+
+import re
+
+#ask what string of text they want searched and eliminated
+
+print('''Please enter the characters that you would like removed
+	from your text file.''')
+
+removeChars = input()
+
+print('Please type, or paste the text you would like have the program search.')
+
+searchText = input() #this has to be set = to entered from the defined dunction
+
+def  trimFunction(entered):
+	firstArgument=re.compile(r'\S')
+	nospaceText = firstArgument.findall(entered) #need to adjust so that text copied from the clipboard is entered
+	combinedText = ''.join(nospaceText) #removing spaces
+
+	for i in range(len(removeChars)):
+		altText = combinedText #creating a new variable that is ammended at the end of the for loop
+#		print(removeChars[i])
+		removingRegex = re.compile(r'[^'+removeChars[i]+']')
+		removedText = removingRegex.findall(altText) #removes the specific text for each iteration of the loop
+#		print(altText)
+		combinedText = ''.join(removedText)
+
+	print(combinedText)
+
+
+trimFunction(searchText)
